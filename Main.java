@@ -65,7 +65,7 @@ public class Main {
            // Выход из программы
             if(var.equals("end")) break;
 
-            // Обработка коменд меню
+            // Обработка команд меню
             varMenu = Integer.parseInt(var);
             switch (varMenu){
                 case 1: // доход
