@@ -12,13 +12,21 @@ public class Main {
         System.out.print("Введите команду: ");
     }
 
+    public static int taxUSN6(int income){
+        return (int)(income * 0.06);
+    }
+
+    public static int taxUSN15(int income, int expense){
+        return(int)((income - expense) * 0.15);
+    }
+
     public static void printTaxSystem(int income, int expense){
         // Расчёт налога по УСН
-        int taxUSN = (int)(income * 0.06);
+        int taxUSN = taxUSN6(income);
             if(taxUSN < 0) taxUSN = 0;
 
         // Расчёт налога по УСН, 15 % от (доход - расход)
-        int taxUSN15 = (int)((income - expense) * 0.15);
+        int taxUSN15 = taxUSN15(income, expense);
             if(taxUSN15 < 0) taxUSN15 = 0;
 
         // Рекомендации
